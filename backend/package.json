@@ -1,0 +1,27 @@
+{
+  "name": "fermiscope-backend",
+  "version": "1.0.0",
+  "description": "FermiScope - Alien Civilization Research and Signal Detection System (backend)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node seed/seed.js",
+    "test:engine": "node tests/signalEngine.test.js",
+    "test:offline": "node tests/offline.test.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.24.7",
+    "morgan": "^1.12.1",
+    "pdfkit": "^0.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
