@@ -3,7 +3,9 @@ import axios from "axios";
 export const TOKEN_KEY = "fermiscope_token";
 
 // Because of the Vite proxy, "/api" is sent to http://localhost:5000/api
-const api = axios.create({ baseURL: "/api" });
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || "/api",
+});
 
 // Attach the JWT to every request
 api.interceptors.request.use((config) => {
